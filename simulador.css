@@ -1,0 +1,147 @@
+/* Formulário de simulação */
+.simulador-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.simulador-form .step {
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition);
+}
+
+.simulador-form .step:hover {
+  transform: translateY(-4px);
+}
+
+body.dark .simulador-form .step {
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.simulador-form label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.simulador-form input,
+.simulador-form select {
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: #fff;
+  color: var(--text-light);
+  transition: border var(--transition), box-shadow var(--transition);
+}
+
+.simulador-form input:focus,
+.simulador-form select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+  outline: none;
+}
+
+body.dark .simulador-form input,
+body.dark .simulador-form select {
+  background: #2a2a2a;
+  color: var(--text-dark);
+  border-color: #444;
+}
+
+/* Botão simular */
+.simulador-form .btn {
+  grid-column: 1 / -1;
+  padding: 14px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.simulador-form .btn:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+/* Resultado */
+.resultado {
+  margin-top: 30px;
+  padding: 24px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease;
+}
+
+body.dark .resultado {
+  background: #1e1e1e;
+  color: var(--text-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Gráfico */
+.chart-container {
+  margin-top: 30px;
+}
+
+canvas {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+body.dark canvas {
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+
+/* Botão exportar PDF */
+.export {
+  margin-top: 20px;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.export:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .simulador-form {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Investidor | Finanças Tech</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="perfil.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="calcularperfil.js" defer></script>
+</head>
+<body>
+
+ <header class="header">
+    <div class="container header-content">
+      <h1 class="logo">Finanças<span>Tech</span></h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="guia.html">Guia</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="simulador.html">Simulador</a></li>
+          <li><a href="dividendos.html">Dividendos</a></li>
+          <li><a href="videos.html">Vídeos</a></li>
+          <li><a href="sobre_nos.html" class="active">Sobre Nós</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="section">
+      <h2>Quiz de Perfil de Investidor</h2>
+      <p style="text-align: center; margin-bottom: 30px;">Descubra se você é Conservador, Moderado ou Arrojado!</p>
+
+      <div id="progress-container" class="step">
+        <div id="progress-bar" style="height: 12px; background: var(--primary); width: 0%; border-radius: var(--radius);"></div>
+      </div>
+
+      <form id="quizForm">
+        <div class="steps">
+          <!-- Perguntas do quiz -->
+          <div class="step">
+            <label>1. Qual é o seu objetivo principal ao investir?</label><br>
+            <input type="radio" name="p1" value="C"> Crescimento de longo prazo<br>
+            <input type="radio" name="p1" value="M"> Rendimento regular<br>
+            <input type="radio" name="p1" value="A"> Preservação de capital
+          </div>
+
+          <div class="step">
+            <label>2. Qual é a sua experiência com investimentos?</label><br>
+            <input type="radio" name="p2" value="C"> Nenhuma experiência<br>
+            <input type="radio" name="p2" value="M"> Alguma experiência<br>
+            <input type="radio" name="p2" value="A"> Experiência avançada
+          </div>
+
+          <div class="step">
+            <label>3. Quanto tempo você pretende deixar o seu dinheiro investido?</label><br>
+            <input type="radio" name="p3" value="C"> Menos de 1 ano<br>
+            <input type="radio" name="p3" value="M"> De 1 a 5 anos<br>
+            <input type="radio" name="p3" value="A"> Mais de 5 anos
+          </div>
+
+          <div class="step">
+            <label>4. Qual é o seu nível de tolerância ao risco?</label><br>
+            <input type="radio" name="p4" value="C"> Baixo<br>
+            <input type="radio" name="p4" value="M"> Moderado<br>
+            <input type="radio" name="p4" value="A"> Alto
+          </div>
+
+          <div class="step">
+            <label>5. Você já sofreu perdas significativas com investimentos no passado?</label><br>
+            <input type="radio" name="p5" value="C"> Sim<br>
+            <input type="radio" name="p5" value="M"> Não<br>
+            <input type="radio" name="p5" value="A"> Prefiro não dizer
+          </div>
+
+          <div class="step">
+            <label>6. Como você reage diante de perdas financeiras?</label><br>
+            <input type="radio" name="p6" value="C"> Fico muito preocupado e prefiro resgatar o dinheiro<br>
+            <input type="radio" name="p6" value="M"> Fico desconfortável, mas entendo que pode ser parte do processo<br>
+            <input type="radio" name="p6" value="A"> Aceito tranquilamente e sigo em frente
+          </div>
+
+          <div class="step">
+            <label>7. Qual é a sua situação financeira atual?</label><br>
+            <input type="radio" name="p7" value="C"> Endividado(a)<br>
+            <input type="radio" name="p7" value="M"> Estável<br>
+            <input type="radio" name="p7" value="A"> Com uma reserva financeira sólida
+          </div>
+
+          <div class="step">
+            <label>8. Você tem investimentos em outros ativos (ações, imóveis, etc.)?</label><br>
+            <input type="radio" name="p8" value="C"> Não<br>
+            <input type="radio" name="p8" value="M"> Sim, em poucos ativos<br>
+            <input type="radio" name="p8" value="A"> Sim, em vários ativos
+          </div>
+
+          <div class="step">
+            <label>9. Qual é a sua expectativa de retorno sobre os investimentos?</label><br>
+            <input type="radio" name="p9" value="C"> Menos de 5% ao ano<br>
+            <input type="radio" name="p9" value="M"> Entre 5% e 10% ao ano<br>
+            <input type="radio" name="p9" value="A"> Mais de 10% ao ano
+          </div>
+
+          <div class="step">
+            <label>10. Você tem facilidade para lidar com flutuações de mercado?</label><br>
+            <input type="radio" name="p10" value="C"> Não<br>
+            <input type="radio" name="p10" value="M"> De vez em quando<br>
+            <input type="radio" name="p10" value="A"> Sim
+          </div>
+
+          <div class="step">
+            <label>11. Qual é a sua opinião sobre investimentos em renda variável (ações, fundos, etc.)?</label><br>
+            <input type="radio" name="p11" value="C"> Não me sinto confortável<br>
+            <input type="radio" name="p11" value="M"> Estou disposto(a) a tentar, mas com cautela<br>
+            <input type="radio" name="p11" value="A"> Estou totalmente confortável com esse tipo de investimento
+          </div>
+
+          <div class="step">
+            <label>12. Você prefere tomar decisões financeiras por conta própria ou seguir a orientação de um especialista?</label><br>
+            <input type="radio" name="p12" value="C"> Prefiro tomar minhas próprias decisões<br>
+            <input type="radio" name="p12" value="M"> Gosto de seguir orientações, mas decido por conta própria<br>
+            <input type="radio" name="p12" value="A"> Prefiro seguir a orientação de um especialista
+          </div>
+
+          <div class="step">
+            <label>13. Qual é a sua maior preocupação ao investir?</label><br>
+            <input type="radio" name="p13" value="C"> Perder dinheiro<br>
+            <input type="radio" name="p13" value="M"> Não ter tempo para acompanhar os investimentos<br>
+            <input type="radio" name="p13" value="A"> Não entender totalmente os investimentos
+          </div>
+
+          <div class="step">
+            <label>14. Como você lida com a diversificação de investimentos?</label><br>
+            <input type="radio" name="p14" value="C"> Não diversifico e prefiro um único tipo de investimento<br>
+            <input type="radio" name="p14" value="M"> Diversifico em algumas opções, mas com um número limitado<br>
+            <input type="radio" name="p14" value="A"> Busco uma diversificação ampla em diferentes tipos de investimentos
+          </div>
+
+          <div class="step">
+            <label>15. Você considera investir em ativos internacionais (ações, fundos, etc.)?</label><br>
+            <input type="radio" name="p15" value="C"> Não<br>
+            <input type="radio" name="p15" value="M"> Talvez, dependendo das condições<br>
+            <input type="radio" name="p15" value="A"> Sim, tenho interesse
+          </div>
+        </div>
+        <button type="submit" class="btn">Ver meu Perfil</button>
+      </form>
+
+      <div id="resultado" class="step" style="display:none; opacity:0; transition: opacity 0.5s ease;"></div>
+      <canvas id="graficoPerfil" style="max-width:400px; margin:30px auto; display:none;"></canvas>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Finanças Tech. Todos os direitos reservados.</p>
+  </footer>
+
+  <button class="theme-toggle" onclick="document.body.classList.toggle('dark')">🌓</button>
+  <script src="tema.js"></script>
+
+  <script>
+    const quizForm = document.getElementById('quizForm');
+    const resultado = document.getElementById('resultado');
+    const progressBar = document.getElementById('progress-bar');
+    const graficoPerfil = document.getElementById('graficoPerfil');
+    let chart;
+
+    quizForm.addEventListener('change', () => {
+      const total = document.querySelectorAll('.steps input[type="radio"]:checked').length;
+      const totalPerguntas = document.querySelectorAll('.steps .step').length;
+      const progresso = Math.round((total / totalPerguntas) * 100);
+      progressBar.style.width = progresso + '%';
+    });
+
+    quizForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const respostas = new FormData(quizForm);
+      let pontos = { C: 0, M: 0, A: 0 };
+
+      for (let [_, valor] of respostas.entries()) {
+        pontos[valor]++;
+      }
+
+      let perfil, mensagem;
+
+      if (pontos.C >= pontos.M && pontos.C >= pontos.A) {
+        perfil = "Conservador";
+        mensagem = "Perfil Conservador: priorize segurança e previsibilidade. Invista em Tesouro Selic, CDBs garantidos e fundos de renda fixa.";
+      } else if (pontos.M >= pontos.C && pontos.M >= pontos.A) {
+        perfil = "Moderado";
+        mensagem = "Perfil Moderado: busque equilíbrio entre segurança e crescimento. Renda fixa, multimercados e algumas ações.";
+      } else {
+        perfil = "Arrojado";
+        mensagem = "Perfil Arrojado: priorize rentabilidade mesmo com riscos. Ações, criptomoedas, FIIs e fundos agressivos.";
+      }
+
+      resultado.style.display = 'block';
+      resultado.style.opacity = '0';
+      setTimeout(() => {
+        resultado.style.opacity = '1';
+      }, 50);
+      resultado.innerHTML = `<h3>Seu perfil de investidor é: ${perfil}</h3><p>${mensagem}</p>`;
+      progressBar.style.width = '100%';
+
+      graficoPerfil.style.display = 'block';
+      if (chart) chart.destroy();
+      chart = new Chart(graficoPerfil, {
+        type: 'pie',
+        data: {
+          labels: ['Conservador', 'Moderado', 'Arrojado'],
+          datasets: [{
+            data: [pontos.C, pontos.M, pontos.A],
+            backgroundColor: ['#4caf50', '#ffb300', '#e53935']
+          }]
+        },
+        options: {
+          plugins: {
+            legend: { position: 'bottom' }
+          }
+        }
+      });
+    });
+    
+  </script>
+</body>
+</html>
