@@ -1,0 +1,64 @@
+/* ==== Dropdown de Usuário ==== */
+.user-menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  display: none;
+  flex-direction: column;
+  background: var(--card-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 180px;
+  overflow: hidden;
+}
+
+.user-menu.open .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-header {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--input-border);
+  text-align: left;
+}
+
+.dropdown-name {
+  display: block;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.dropdown-email {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--subtext);
+  margin-top: 0.25rem;
+}
+
+.dropdown-menu a {
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.dropdown-menu a:hover {
+  background: var(--input-bg);
+}
