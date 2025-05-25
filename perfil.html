@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,10 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./src/js/calcularperfil.js" defer></script>
 </head>
+
 <body>
 
- <header class="header">
+  <header class="header">
     <div class="container header-content">
       <h1 class="logo">Finanças<span>Tech</span></h1>
       <nav>
@@ -29,13 +31,14 @@
   </header>
 
   <main class="container">
-    
+
     <section class="section">
       <h2>Quiz de Perfil de Investidor</h2>
       <p style="text-align: center; margin-bottom: 30px;">Descubra se você é Conservador, Moderado ou Arrojado!</p>
 
       <div id="progress-container" class="step">
-        <div id="progress-bar" style="height: 12px; background: var(--primary); width: 0%; border-radius: var(--radius);"></div>
+        <div id="progress-bar"
+          style="height: 12px; background: var(--primary); width: 0%; border-radius: var(--radius);"></div>
       </div>
 
       <form id="quizForm">
@@ -119,7 +122,8 @@
           </div>
 
           <div class="step">
-            <label>12. Você prefere tomar decisões financeiras por conta própria ou seguir a orientação de um especialista?</label><br>
+            <label>12. Você prefere tomar decisões financeiras por conta própria ou seguir a orientação de um
+              especialista?</label><br>
             <input type="radio" name="p12" value="C"> Prefiro tomar minhas próprias decisões<br>
             <input type="radio" name="p12" value="M"> Gosto de seguir orientações, mas decido por conta própria<br>
             <input type="radio" name="p12" value="A"> Prefiro seguir a orientação de um especialista
@@ -136,7 +140,8 @@
             <label>14. Como você lida com a diversificação de investimentos?</label><br>
             <input type="radio" name="p14" value="C"> Não diversifico e prefiro um único tipo de investimento<br>
             <input type="radio" name="p14" value="M"> Diversifico em algumas opções, mas com um número limitado<br>
-            <input type="radio" name="p14" value="A"> Busco uma diversificação ampla em diferentes tipos de investimentos
+            <input type="radio" name="p14" value="A"> Busco uma diversificação ampla em diferentes tipos de
+            investimentos
           </div>
 
           <div class="step">
@@ -157,9 +162,6 @@
   <footer class="footer">
     <p>&copy; 2025 Finanças Tech. Todos os direitos reservados.</p>
   </footer>
-
-  <button class="theme-toggle" onclick="document.body.classList.toggle('dark')">🌓</button>
-  <script src="./src/js/tema.js"></script>
 
   <script>
     const quizForm = document.getElementById('quizForm');
@@ -224,7 +226,7 @@
         }
       });
     });
-    
   </script>
 </body>
+
 </html>
