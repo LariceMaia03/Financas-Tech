@@ -20,11 +20,6 @@
   transform: translateY(-4px);
 }
 
-body.dark .simulador-form .step {
-  background: #1e1e1e;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
 .simulador-form label {
   font-weight: 600;
   font-size: 1rem;
@@ -49,13 +44,6 @@ body.dark .simulador-form .step {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
   outline: none;
-}
-
-body.dark .simulador-form input,
-body.dark .simulador-form select {
-  background: #2a2a2a;
-  color: var(--text-dark);
-  border-color: #444;
 }
 
 /* Botão simular */
@@ -86,12 +74,6 @@ body.dark .simulador-form select {
   animation: fadeIn 0.5s ease;
 }
 
-body.dark .resultado {
-  background: #1e1e1e;
-  color: var(--text-dark);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
 /* Gráfico */
 .chart-container {
   margin-top: 30px;
@@ -102,12 +84,6 @@ canvas {
   border-radius: var(--radius);
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-
-body.dark canvas {
-  background: #1e1e1e;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
 
 /* Botão exportar PDF */
 .export {

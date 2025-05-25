@@ -1,0 +1,96 @@
+@import url('config.css');
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+  gap: 40px;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.hero-img img {
+  max-width: 450px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Seções */
+.section {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 30px;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+/* Cards e grids */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.step {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition);
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+/* Tabelas */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table thead {
+  background: var(--primary);
+  color: #fff;
+}
+
+.table th, .table td {
+  padding: 16px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background var(--transition);
+  text-align: center;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background: var(--secondary);
+}
